@@ -5,7 +5,7 @@ terraform {
 variable "environment" {
   description = "Environment for GitOps demo"
   type        = string
-  default     = "demo"
+  default     = "staging"
 }
 
 output "deployment_message" {
