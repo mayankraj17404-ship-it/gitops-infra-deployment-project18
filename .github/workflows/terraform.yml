@@ -34,3 +34,13 @@ jobs:
 
       - name: Terraform Plan
         run: terraform -chdir=terraform plan
+
+  approval-demo:
+    name: Approval Gate Demo
+    needs: terraform
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - name: Approved Demo Deployment
+        run: echo "Production environment approval gate passed"
